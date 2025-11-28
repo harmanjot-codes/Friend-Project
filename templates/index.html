@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI House Planner</title>
+</head>
+<body>
+    <h1>🏡 AI House Planner</h1>
+
+    <form action="/generate" method="POST">
+        <label>Land Area (sq ft):</label>
+        <input name="area" required><br><br>
+
+        <label>Budget (₹):</label>
+        <input name="budget" required><br><br>
+
+        <label>Number of Rooms:</label>
+        <input name="rooms" required><br><br>
+
+        <label>Style:</label>
+        <select name="style">
+            <option>Modern</option>
+            <option>Simple</option>
+            <option>Luxury</option>
+        </select><br><br>
+
+        <label>Include Furniture?</label>
+        <select name="furniture">
+            <option>Yes</option>
+            <option>No</option>
+        </select><br><br>
+
+        <button type="submit">Generate Plan</button>
+    </form>
+</body>
+</html>

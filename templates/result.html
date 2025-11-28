@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your House Plan</title>
+</head>
+<body>
+
+<h1>🏡 Your AI House Plan</h1>
+
+<h2>Summary</h2>
+<p>{{ result.summary }}</p>
+
+<h2>Rooms & Sizes</h2>
+<ul>
+    {% for r in result.room_plan %}
+    <li>{{ r.room }} — {{ r.size }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Materials Required</h2>
+<ul>
+    {% for m in result.materials %}
+    <li>{{ m }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Estimated Cost</h2>
+<p>{{ result.estimated_cost }}</p>
+
+<h2>Design Features</h2>
+<ul>
+    {% for d in result.design_features %}
+    <li>{{ d }}</li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="/">Start Again</a>
+
+</body>
+</html>
